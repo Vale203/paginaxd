@@ -1,0 +1,184 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum - Valentina Llivisaca</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #4a148c; /* Morado oscuro */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            color: #333;
+        }
+
+        /* Título principal de la página */
+        h1 {
+            color: #ffffff; /* Blanco */
+            font-size: 36px;
+            margin-top: 20px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra para mejor visibilidad */
+        }
+
+        /* Estilo del contenedor principal */
+        .container {
+            background-color: #ffffff; /* Fondo blanco */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 900px;
+            margin: 20px auto; /* Centrar los cuadros */
+        }
+
+        /* Estilos de los elementos */
+        .section {
+            margin-top: 40px;
+            text-align: left;
+            font-size: 16px;
+            color: #555;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #6a1b9a;
+        }
+
+        /* Estilo de habilidades */
+        .skills-bar {
+            margin-top: 20px;
+        }
+
+        .skills-bar p {
+            font-weight: bold;
+            color: #6a1b9a;
+        }
+
+        .skills-bar div {
+            background: #ddd;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .skills-bar div span {
+            display: block;
+            height: 100%;
+            background: #6a1b9a;
+            animation: fillSkill 1.2s ease-in-out;
+        }
+
+        @keyframes fillSkill {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        /* Estilo del código QR */
+        .qr-section img {
+            width: 150px;
+            height: 150px;
+            margin-top: 20px;
+            border: 2px solid #6a1b9a;
+            border-radius: 10px;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px;
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Currículum</h1>
+    
+    <div class="container">
+        <!-- Presentación -->
+        <div class="section" id="presentation">
+            <h2>Presentación</h2>
+            <p>Mi nombre es Valentina Llivisaca, tengo 17 años, de nacionalidad ecuatoriana.</p>
+            <p>En julio del presente año obtuve mi título como Bachiller en Ciencias de la Unidad Educativa Particular “LETORT” con una calificación final de 9,48/10.</p>
+            <p>Obtuve tres certificados del Bachillerato Internacional (IB) en física, inglés y lengua y literatura.</p>
+        </div>
+
+        <!-- Logros -->
+        <div class="section" id="achievements">
+            <h2>Logros</h2>
+            <p><strong>Infomatrix 2020:</strong> Clasificación a la ronda de exposición a nivel Latinoamérica.</p>
+            <p><strong>Entrevista en la UTE:</strong> Participación en el programa “La mujer y la niña en la ciencia”, junto con Linda Guamán.</p>
+            <p><strong>bachillerato participe en varios cursos relacionados con la física en universidades del país, como:
+                •	Universidad San Francisco de Quito (USFQ): participé en un taller de física de partículas realizado en el campus de la USFQ en conjunto con universidades en el exterior siendo una modalidad hibrida.
+                •	Universidad de Investigación Tecnología Experimental Yachay, donde participé en “Epic Junior” que fue una serie de charlas introductoras de astrofísica, física cuántica y modelización del átomo.
+                .</p>
+            <p><strong>Premio Excelencia Académica:</strong> Reconocimiento por rendimiento sobresaliente durante la educación secundaria.</p>
+        </div>
+
+        <!-- Actividades extracurriculares -->
+        <div class="section" id="extracurricular">
+            <h2>Actividades Extracurriculares</h2>
+            <ul>
+                <li><strong>Coro estudiantil:</strong> Participación en eventos nacionales e internacionales representando a la institución.</li>
+                <li><strong>Club de ciencia:</strong> Miembro activo, desarrollando proyectos de investigación en física y tecnología.</li>
+                <li><strong>Deporte:</strong> Participacion como parte del cuerpo muisical de la sinfonica nacional juvenil OSNE .</li>
+            </ul>
+        </div>
+
+        <!-- Habilidades -->
+        <div class="section" id="skills">
+            <h2>Habilidades</h2>
+            <div class="skills-bar">
+                <p>Python</p>
+                <div><span style="width: 80%;"></span></div>
+            </div>
+            <div class="skills-bar">
+                <p>Inglés</p>
+                <div><span style="width: 90%;"></span></div>
+            </div>
+            <div class="skills-bar">
+                <p>Trabajo en equipo</p>
+                <div><span style="width: 85%;"></span></div>
+            </div>
+        </div>
+
+       
+
+        <!-- Contacto -->
+        <div class="section" id="contact">
+            <h2>Contacto</h2>
+            <p>Si deseas contactarme, por favor ingresa tu correo electrónico:</p>
+            <input type="email" id="user-email" placeholder="Tu correo electrónico" />
+            <br>
+            <button id="contact-button">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        // Función para manejar el formulario de contacto
+        document.getElementById("contact-button").addEventListener("click", () => {
+            const userEmail = document.getElementById("user-email").value;
+            if (!userEmail) {
+                alert("Por favor ingresa tu correo electrónico.");
+                return;
+            }
+            alert(Gracias por tu interés, te contactaremos pronto a ${userEmail}.);
+            document.getElementById("user-email").value = ""; // Limpiar el campo
+        });
+    </script>
+</body>
+</html>
